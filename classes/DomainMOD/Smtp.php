@@ -70,7 +70,9 @@ class Smtp
             _('Username') => $this->format->obfusc($this->username), _('Password') => $this->format->obfusc($this->password),
             _('CharSet') => EMAIL_ENCODING_TYPE);
 
-        if ($mail->send()) {
+        $sent = $mail->send();
+
+        if ($sent) {
 
             $log_message = $email_title . ' ' . _('Email :: SEND SUCCEEDED');
             $this->log->info($log_message, $log_extra);
@@ -78,6 +80,7 @@ class Smtp
 
         } else {
 
+            $log_extra[_('Error')] = $mail->ErrorInfo;
             $log_message = $email_title . ' ' . _('Email :: SEND FAILED');
             $this->log->error($log_message, $log_extra);
             return false;

@@ -41,9 +41,13 @@ $first_name = $_SESSION['s_first_name'];
 $last_name = $_SESSION['s_last_name'];
 $username = $_SESSION['s_username'];
 $email_address = $_SESSION['s_email_address'];
-require_once DIR_INC . '/email/send-test-email.inc.php';
+$test_email_sent = require DIR_INC . '/email/send-test-email.inc.php';
 
-$_SESSION['s_message_success'] .= _("Test Email Sent!") . "<BR>";
+if ($test_email_sent) {
+	$_SESSION['s_message_success'] .= _('Test Email Sent!') . '<BR>';
+} else {
+	$_SESSION['s_message_danger'] .= _('Test Email Failed. Enable Debugging Mode and check the application logs for details.') . '<BR>';
+}
 
 header("Location: index.php");
 exit;

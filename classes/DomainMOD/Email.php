@@ -49,11 +49,11 @@ class Email
         if ($this->use_smtp == '1') {
 
             $smtp = new Smtp();
-            $smtp->send($email_title, $to_address, $this->from_address, $subject, $message_html, $message_text);
+            return $smtp->send($email_title, $to_address, $this->from_address, $subject, $message_html, $message_text);
 
         } else {
 
-            $this->intPhpMail($email_title, $to_address, $subject, $message_html);
+            return $this->intPhpMail($email_title, $to_address, $subject, $message_html);
 
         }
     }
