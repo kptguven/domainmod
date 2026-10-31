@@ -22,12 +22,11 @@
 
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <!-- Add icons to the links using the .nav-icon class
-             with font-awesome or any other icon font library -->
+        <!-- Navigation icons use Fluent System Icons. -->
         <li class="nav-header"><?php echo _('NAVIGATION') ?></li>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/" class="nav-link<?php if ($software_section == "dashboard") echo " active"; ?>">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <span class="nav-icon fluent-icon fluent-icon--home" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Dashboard'); ?>
                 </p>
@@ -35,7 +34,7 @@
         </li>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/domains/" class="nav-link<?php if ($software_section == "domains") echo " active"; ?>">
-                <i class="nav-icon fas fa-sitemap"></i>
+                <span class="nav-icon fluent-icon fluent-icon--globe" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Domains'); ?>
                 </p>
@@ -47,7 +46,7 @@
 	    if ($domains_in_list_queue == '1' || $domains_in_queue == '1') { ?>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/queue/" class="nav-link<?php if ($software_section == "queue") echo " active"; ?>">
-                <i class="nav-icon fas fa-hourglass"></i>
+                <span class="nav-icon fluent-icon fluent-icon--hourglass" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Queue'); ?>
                 </p>
@@ -56,7 +55,7 @@
         <?php } ?>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/ssl/" class="nav-link<?php if ($software_section == "ssl") echo " active"; ?>">
-                <i class="nav-icon fas fa-lock"></i>
+                <span class="nav-icon fluent-icon fluent-icon--lock" aria-hidden="true"></span>
                 <p>
                     <?php echo _('SSL Certificates'); ?>
                 </p>
@@ -64,7 +63,7 @@
         </li>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/assets/" class="nav-link<?php if ($software_section == "assets") echo " active"; ?>">
-                <i class="nav-icon fas fa-cubes"></i>
+                <span class="nav-icon fluent-icon fluent-icon--cube" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Assets'); ?>
                 </p>
@@ -72,7 +71,7 @@
         </li>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/segments/" class="nav-link<?php if ($software_section == "segments") echo " active"; ?>">
-                <i class="nav-icon fas fa-filter"></i>
+                <span class="nav-icon fluent-icon fluent-icon--filter" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Segments'); ?>
                 </p>
@@ -80,7 +79,7 @@
         </li>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/bulk/" class="nav-link<?php if ($software_section == "bulk") echo " active"; ?>">
-                <i class="nav-icon fas fa-copy"></i>
+                <span class="nav-icon fluent-icon fluent-icon--copy" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Bulk Updater'); ?>
                 </p>
@@ -88,7 +87,7 @@
         </li>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/reporting/" class="nav-link<?php if ($software_section == "reporting") echo " active"; ?>">
-                <i class="nav-icon fas fa-chart-bar"></i>
+                <span class="nav-icon fluent-icon fluent-icon--chart" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Reporting'); ?>
                 </p>
@@ -98,7 +97,7 @@
         <?php if (isset($_SESSION['s_is_admin']) && $_SESSION['s_is_admin'] === 1) { ?>
             <li class="nav-item">
                 <a href="<?php echo $web_root; ?>/admin/dw/" class="nav-link<?php if ($software_section == "dw") echo " active"; ?>">
-                    <i class="nav-icon fas fa-database"></i>
+                    <span class="nav-icon fluent-icon fluent-icon--database" aria-hidden="true"></span>
                     <p>
                         <?php echo _('Data Warehouse'); ?>
                     </p>
@@ -107,10 +106,10 @@
         <?php } ?>
         <li class="nav-item<?php if ($software_section == "settings") echo " menu-open"; ?>">
             <a href="#" class="nav-link<?php if ($software_section == "settings") echo " active"; ?>">
-                <i class="nav-icon fas fa-cogs"></i>
+                <span class="nav-icon fluent-icon fluent-icon--settings" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Settings') ?>
-                    <i class="right fas fa-angle-left"></i>
+                    <span class="right fluent-icon fluent-icon--chevron" aria-hidden="true"></span>
                 </p>
             </a>
             <ul class="nav nav-treeview">
@@ -142,10 +141,10 @@
         </li>
         <li class="nav-item<?php if ($software_section == "maintenance") echo " menu-open"; ?>">
             <a href="#" class="nav-link<?php if ($software_section == "maintenance") echo " active"; ?>">
-                <i class="nav-icon fas fa-check"></i>
+                <span class="nav-icon fluent-icon fluent-icon--check" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Maintenance') ?>
-                    <i class="right fas fa-angle-left"></i>
+                    <span class="right fluent-icon fluent-icon--chevron" aria-hidden="true"></span>
                 </p>
             </a>
             <ul class="nav nav-treeview">
@@ -173,10 +172,10 @@
         <?php if (isset($_SESSION['s_is_admin']) && $_SESSION['s_is_admin'] === 1) { ?>
             <li class="nav-item<?php if ($software_section == "admin") echo " menu-open"; ?>">
                 <a href="#" class="nav-link<?php if ($software_section == "admin") echo " active"; ?>">
-                    <i class="nav-icon fas fa-wrench"></i>
+                    <span class="nav-icon fluent-icon fluent-icon--wrench" aria-hidden="true"></span>
                     <p>
                         <?php echo _('Administration') ?>
-                        <i class="right fas fa-angle-left"></i>
+                        <span class="right fluent-icon fluent-icon--chevron" aria-hidden="true"></span>
                     </p>
                 </a>
                 <ul class="nav nav-treeview">
@@ -251,7 +250,7 @@
         <?php } ?>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/logout.php" class="nav-link">
-                <i class="nav-icon fas fa-sign-out-alt"></i>
+                <span class="nav-icon fluent-icon fluent-icon--exit" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Logout'); ?>
                 </p>
@@ -260,7 +259,7 @@
         <li class="nav-header"><?php echo _('HELP') ?></li>
         <li class="nav-item">
             <a href="<?php echo $web_root; ?>/docs/userguide/" class="nav-link">
-                <i class="nav-icon fas fa-book"></i>
+                <span class="nav-icon fluent-icon fluent-icon--book" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Documentation'); ?>
                 </p>
@@ -268,7 +267,7 @@
         </li>
         <li class="nav-item">
             <a href="https://domainmod.org/support/" class="nav-link">
-                <i class="nav-icon fas fa-life-ring"></i>
+                <span class="nav-icon fluent-icon fluent-icon--support" aria-hidden="true"></span>
                 <p>
                     <?php echo _('Support'); ?>
                 </p>
@@ -276,7 +275,7 @@
         </li>
         <li class="nav-item">
             <a href="https://domainmod.org/news/" class="nav-link">
-                <i class="nav-icon fas fa-newspaper"></i>
+                <span class="nav-icon fluent-icon fluent-icon--news" aria-hidden="true"></span>
                 <p>
                     <?php echo _('News'); ?>
                 </p>

@@ -32,7 +32,7 @@ $search_for = $search_for ?? '';
 
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button" aria-label="Toggle navigation"><span class="fluent-icon fluent-icon--navigation" aria-hidden="true"></span></a>
             </li>
             <li class="nav-item d-sm-inline-block">
                 <a href="<?php echo $web_root; ?>/feedback/" class="nav-link"><?php echo _("Feedback"); ?></a>
@@ -52,19 +52,19 @@ $search_for = $search_for ?? '';
 
             <!-- Navbar Search -->
             <li class="nav-item">
-                <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-                    <i class="fas fa-search"></i>
+                <a class="nav-link" data-widget="navbar-search" href="#" role="button" aria-label="<?php echo _('Domain Search'); ?>">
+                    <span class="fluent-icon fluent-icon--search" aria-hidden="true"></span>
                 </a>
                 <div class="navbar-search-block">
                     <form class="form-inline" action="<?php echo $web_root; ?>/domains/index.php">
                         <div class="input-group input-group-sm">
                             <input class="form-control form-control-navbar" type="search" placeholder="<?php echo _('Domain Search'); ?>" aria-label="<?php echo _('Domain Search'); ?>" name="search_for"<?php if ($search_for && $search_for != '') echo ' value="' . $search_for . '"'; ?>>
                             <div class="input-group-append">
-                                <button class="btn btn-navbar" type="submit">
-                                    <i class="fas fa-search"></i>
+                                <button class="btn btn-navbar" type="submit" aria-label="<?php echo _('Search'); ?>">
+                                    <span class="fluent-icon fluent-icon--search" aria-hidden="true"></span>
                                 </button>
-                                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                                    <i class="fas fa-times"></i>
+                                <button class="btn btn-navbar" type="button" data-widget="navbar-search" aria-label="<?php echo _('Close'); ?>">
+                                    <span class="fluent-icon fluent-icon--dismiss" aria-hidden="true"></span>
                                 </button>
                             </div>
                         </div>
@@ -101,13 +101,13 @@ $search_for = $search_for ?? '';
             </li>
 <?php */ ?>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo $web_root; ?>/settings/toggles/dark-mode/" role="button">
-                    <i class="fas fa-adjust"></i>
+                <a class="nav-link" href="<?php echo $web_root; ?>/settings/toggles/dark-mode/" role="button" aria-label="<?php echo _('Toggle dark mode'); ?>">
+                    <span class="fluent-icon fluent-icon--moon" aria-hidden="true"></span>
                 </a>
             </li>
             <li class="nav-item dropdown user-menu">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                    <span><i class="fa fa-user"></i></span>
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-label="<?php echo _('User menu'); ?>">
+                    <span class="fluent-icon fluent-icon--person" aria-hidden="true"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <!-- User image -->
@@ -136,8 +136,8 @@ $search_for = $search_for ?? '';
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo $web_root; ?>/logout.php" role="button">
-                    <i class="fas fa-sign-out-alt"></i>
+                <a class="nav-link" href="<?php echo $web_root; ?>/logout.php" role="button" aria-label="<?php echo _('Logout'); ?>">
+                    <span class="fluent-icon fluent-icon--exit" aria-hidden="true"></span>
                 </a>
             </li>
         </ul>
@@ -180,8 +180,8 @@ $search_for = $search_for ?? '';
                     <div class="input-group domainmod-css-sidebar-search-padding">
                         <input class="form-control form-control-sidebar" type="search" placeholder="<?php echo _('Domain Search'); ?>" aria-label="<?php echo _('Domain Search');; ?>" name="search_for"<?php if ($search_for && $search_for != '') echo ' value="' . $search_for . '"'; ?>>
                         <div class="input-group-append">
-                            <button class="btn btn-sidebar">
-                                <i class="fas fa-search fa-fw"></i>
+                            <button class="btn btn-sidebar" aria-label="<?php echo _('Search'); ?>">
+                                <span class="fluent-icon fluent-icon--search" aria-hidden="true"></span>
                             </button>
                         </div>
                     </div>
