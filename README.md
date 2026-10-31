@@ -22,6 +22,7 @@ Requirements
 **Software**: PHP 8.1-8.2.9, MariaDB 10.4-11.1.2 or MySQL 5.7-8.1.0  
 **PHP Extensions**: PDO (MariaDB/MySQL), cURL, OpenSSL, gettext  
 **PHP Settings**: allow_url_fopen  
+**Frontend Build**: Node.js 20.19.0 or newer and npm (only needed to rebuild React/Fluent UI assets)
 
 Downloading
 -----------
@@ -52,6 +53,11 @@ More Information: <http://www.softaculous.com/softaculous/apps/others/DomainMOD/
 Installing
 ----------
 If you installed DomainMOD using Docker or Softaculous in the previous step you can ignore the rest of this *Installing* section, as you should already have DomainMOD up-and-running.
+
+When building from source, run the following commands from the project directory to generate the React and Fluent UI assets:
+
+    npm install
+    npm run build
 
 If you downloaded the .zip file in the previous step, you will now need to upload the archive to your web server and then unpack it into the folder where you wish to install (or unpack it and then upload it, whichever you prefer).
 

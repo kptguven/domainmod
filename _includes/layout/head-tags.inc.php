@@ -39,6 +39,9 @@
 <link rel="stylesheet" href="<?php echo $web_root . '/' . WEBROOT_THEME; ?>/dist/css/adminlte.min.css">
 <!-- Custom DomainMOD styles -->
 <link rel="stylesheet" href="<?php echo $web_root; ?>/css/base.css">
+<?php if (file_exists(DIR_ROOT . '/assets/build/fluent-icons.js')) { ?>
+<script type="module" src="<?php echo $web_root; ?>/assets/build/fluent-icons.js"></script>
+<?php } ?>
 <?php
 $full_filename = DIR_INC . '/layout/head-tags.DEMO.inc.php';
 

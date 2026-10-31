@@ -8,3 +8,4 @@
 domainmod.log
 error_log
 robots.txt
+/node_modules/
